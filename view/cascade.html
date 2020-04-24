@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 상속, 겹침, 구체성 규칙</title>
+    <style>
+        .inheritance{
+            border: 1px solid blue;
+            color: red;
+            font-weight: 700;
+        }
+        .inheritance span{
+            border: inherit;
+        }
+        .inheritance a{
+            color: inherit;
+        }
+        #cascade{
+            color:purple;
+        }
+        .note{
+            color: green;
+        }
+        p{
+            color: brown !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 3가지 개념</h1>
+    <h2>CSS 상속</h2>
+    <p class="inheritance">element의 최종 style은 <span>다양한 상호작용</span>을 통해 여러 장소에서 선언된 것을 사용할 수 
+        있다. 이런 <a href="#">다양한 상호작용</a>을 통해 CSS는 강력해 질 수 있으며, 반대로 디버그 하기에는 
+        복잡하고 어려워 진다.</p>
+    <h2>겹침과 구체성</h2>
+    <p>종속(Cascade)이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는
+        알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의
+        중심입니다. 이 글은 종속이 무엇인지, 선언한 CSS 정의가 어떤 순서로 종속되는지, 그리고
+        여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.</p>
+        <p class="note">종속(Cascade)이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는
+            알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의
+            중심입니다. 이 글은 종속이 무엇인지, 선언한 CSS 정의가 어떤 순서로 종속되는지, 그리고
+            여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.</p>
+            <p id="cascade" class="note">종속(Cascade)이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는
+                알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의
+                중심입니다. 이 글은 종속이 무엇인지, 선언한 CSS 정의가 어떤 순서로 종속되는지, 그리고
+                여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.</p>
+                <p style="color:blue">종속(Cascade)이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는
+                    알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의
+                    중심입니다. 이 글은 종속이 무엇인지, 선언한 CSS 정의가 어떤 순서로 종속되는지, 그리고
+                    여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.</p>
+</body>
+</html>
